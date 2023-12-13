@@ -129,7 +129,7 @@ aside li {
 */
 .header {
   align-items: center;
-  background: #fff;
+  background: pink;
   display: flex;
   height: var(--header-height);
   padding: 0 1rem;
