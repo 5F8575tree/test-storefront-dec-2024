@@ -33,11 +33,14 @@ export async function loader({request, params, context}) {
     variables: {handle, ...paginationVariables},
   });
 
+  console.log('Fetched Collection: ', collection);
+
   if (!collection) {
     throw new Response(`Collection ${handle} not found`, {
       status: 404,
     });
   }
+
   return json({collection});
 }
 
@@ -71,6 +74,7 @@ export default function Collection() {
  * @param {{products: ProductItemFragment[]}}
  */
 function ProductsGrid({products}) {
+  // console.log('products: ', products);
   return (
     <div className="products-grid">
       {products.map((product, index) => {

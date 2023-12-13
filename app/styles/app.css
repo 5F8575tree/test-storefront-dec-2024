@@ -128,14 +128,31 @@ aside li {
 * --------------------------------------------------
 */
 .header {
-  align-items: center;
-  background: burlywood;
   display: flex;
-  height: var(--header-height);
-  padding: 0 1rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  padding: 0.4rem 1rem;
   position: sticky;
   top: 0;
   z-index: 1;
+}
+.header a {
+  color: white;
+}
+.header-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-bottom {
+  width: 100%;
+}
+
+.logo-in-header {
+  height: 100%;
+  max-height: 64px;
 }
 
 .header-menu-mobile-toggle {
@@ -168,7 +185,6 @@ aside li {
   align-items: center;
   display: flex;
   grid-gap: 1rem;
-  margin-left: auto;
 }
 
 /*

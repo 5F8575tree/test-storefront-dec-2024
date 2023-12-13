@@ -6,18 +6,30 @@ import {useRootLoaderData} from '~/root';
  * @param {HeaderProps}
  */
 export function Header({header, isLoggedIn, cart}) {
-  const {shop, menu} = header;
+  const {menu} = header;
+  const img_url =
+    'https://cdn.shopify.com/s/files/1/0844/9245/2124/files/coin-logo.png';
+
   return (
     <header className="header">
-      <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
-        <strong>{shop.name}</strong>
-      </NavLink>
-      <HeaderMenu
-        menu={menu}
-        viewport="desktop"
-        primaryDomainUrl={header.shop.primaryDomain.url}
-      />
-      <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
+      <div className="header-top">
+        <SearchToggle />
+        <NavLink prefetch="intent" to="/" end>
+          <img
+            className="logo-in-header"
+            src={img_url}
+            alt="logo of a well-groomed man in a coin"
+          />
+        </NavLink>
+        <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
+      </div>
+      <div className="header-bottom">
+        <HeaderMenu
+          menu={menu}
+          viewport="desktop"
+          primaryDomainUrl={header.shop.primaryDomain.url}
+        />
+      </div>
     </header>
   );
 }
@@ -91,7 +103,6 @@ function HeaderCtas({isLoggedIn, cart}) {
       <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
         {isLoggedIn ? 'Account' : 'Sign in'}
       </NavLink>
-      <SearchToggle />
       <CartToggle cart={cart} />
     </nav>
   );
@@ -183,7 +194,7 @@ const FALLBACK_HEADER_MENU = {
 function activeLinkStyle({isActive, isPending}) {
   return {
     fontWeight: isActive ? 'bold' : undefined,
-    color: isPending ? 'grey' : 'black',
+    color: isPending ? 'grey' : '#f8f8f8',
   };
 }
 

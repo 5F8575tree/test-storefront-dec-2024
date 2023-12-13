@@ -20,6 +20,7 @@ export async function loader({context, request}) {
 export default function Collections() {
   /** @type {LoaderReturnData} */
   const {collections} = useLoaderData();
+  console.log('collections: ', collections);
 
   return (
     <div className="collections">
