@@ -27,6 +27,13 @@ export default function Homepage() {
   const data = useLoaderData();
   return (
     <div className="home">
+      <div className="hero">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0844/9245/2124/files/gentleman-suits.jpg?v=1702474653"
+          alt="cosy cool barbershop"
+        />
+        <h1>Show the World who you really are.</h1>
+      </div>
       <FeaturedCollection collection={data.featuredCollection} />
       <RecommendedProducts products={data.recommendedProducts} />
     </div>

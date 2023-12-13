@@ -6,6 +6,7 @@
   --header-height: 64px;
   --color-dark: #000;
   --color-light: #fff;
+  --color-accent: #364dad;
 }
 
 img {
@@ -204,7 +205,7 @@ aside li {
 .header-ctas {
   display: flex;
   align-items: center;
-  padding-right: 1rem;
+  padding-right: 2rem;
   gap: 1rem;
   position: relative;
 }
@@ -215,7 +216,7 @@ aside li {
   font-size: 12px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 16px;
 }
 
 /*
@@ -517,4 +518,52 @@ aside li {
 
 .account-logout {
   display: inline-block;
+}
+
+/*
+* --------------------------------------------------
+* homepage
+* --------------------------------------------------
+*/
+.hero {
+  position: relative;
+}
+.hero > h1 {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  font-size: 64px;
+  color: #f8f8f8;
+  text-shadow: 0 4px 26px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  text-wrap: balance;
+}
+@media (max-width: 1100px) {
+  .hero > h1 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 850px) {
+  .hero > h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 564px) {
+  .hero > h1 {
+    top: 22%;
+    left: 5%;
+    font-size: 26px;
+  }
+}
+@media (max-width: 350px) {
+  .hero > h1 {
+    top: 10%;
+    left: 5%;
+    font-size: 20px;
+  }
+}
+.hero > img {
+  width: 100%;
+  max-height: 90svh;
+  object-fit: cover;
 }
