@@ -1,0 +1,19 @@
+.recommended-products-grid {
+}
+.recommended-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recommended-product img {
+}
+.recommended-product__lower h4 {
+}
+.recommended-product__lower small {
+}
+.recommended-product__lower h5 {
+  color: var(--color-grey);
+  font-weight: 300;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -1,12 +1,21 @@
+@import './card.css';
+
 :root {
   --aside-width: 400px;
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
   --header-height: 64px;
-  --color-dark: #000;
-  --color-light: #fff;
-  --color-accent: #364dad;
+  --color-darkest: #151419;
+  --color-darker: #1b1b1b;
+  --color-dark: #262626;
+  --color-grey: #878787;
+  --color-light: #fbfbfb;
+  --color-accent: #f56e0f;
+  --shadow: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1px 1px -0.5px rgba(0, 0, 0, 0.06),
+    0 3px 3px -1.5px rgba(0, 0, 0, 0.06), 0 6px 6px -3px rgba(0, 0, 0, 0.06),
+    0 12px 12px -6px rgba(0, 0, 0, 0.06), 0 24px 24px -12px rgba(0, 0, 0, 0.06);
+  --text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.3);
 }
 
 img {
@@ -136,11 +145,11 @@ aside li {
   z-index: 1;
 }
 .header a {
-  color: #f8f8f8;
+  color: var(--color-light);
 }
 .header-top {
   min-width: 100%;
-  background-color: #000;
+  background-color: var(--color-darkest);
   display: flex;
   justify-content: center;
 }
@@ -157,16 +166,17 @@ aside li {
   padding-left: 1rem;
 }
 .header-top__content > a > svg {
-  fill: #f8f8f8;
+  fill: var(--color-light);
 }
 .header-bottom {
   min-width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #000;
+  background-color: var(--color-darkest);
 }
 .header-bottom__content {
   max-width: 1280px;
+  font-weight: 700;
 }
 
 .logo-in-header {
@@ -210,7 +220,7 @@ aside li {
   position: relative;
 }
 .header-ctas a svg {
-  fill: #f8f8f8;
+  fill: var(--color-light);
 }
 .cart-aside__text {
   font-size: 12px;
@@ -533,8 +543,8 @@ aside li {
   top: 40%;
   left: 15%;
   font-size: 64px;
-  color: #f8f8f8;
-  text-shadow: 0 4px 26px rgba(0, 0, 0, 0.5);
+  color: var(--color-light);
+  text-shadow: 0 4px 26px var(--text-shadow);
   width: 50%;
   text-wrap: balance;
 }
